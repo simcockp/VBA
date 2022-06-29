@@ -9,8 +9,6 @@ Dim HOL As ListObject
 Dim ASSGN As Single
 
 
-'HOL = Range("sHEET5!A1:A5").Value
-
 
 Dim HOLS As ListObject
 
@@ -26,7 +24,6 @@ RWS = Application.WorksheetFunction.CountA(Range("Gantt!A1:A5000"))
     End With
 
 For G = 2 To RWS
-
 
 
 
