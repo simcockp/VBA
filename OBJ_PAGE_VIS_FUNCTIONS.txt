@@ -1,0 +1,27 @@
+Sub shp1_test()
+'******************************************************************
+'* procedure to take an object from the sheet called REF and copy it
+'* to the current sheet to create an instant control bar.
+'******************************************************************
+
+'Define Variables
+Dim ws As Worksheet
+Dim i As Integer
+
+i = 2
+
+For Each ws In ThisWorkbook.Worksheets
+
+ Sheets("ref").Shapes("Rectangle 1").Copy
+    
+    Range("A" & i).Select
+    ActiveSheet.Paste
+    Selection.ShapeRange(1).TextFrame2.TextRange.Characters.Text = ws.Name
+
+i = i + 2
+
+Next ws
+
+Range("A1").Select
+
+End Sub
